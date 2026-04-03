@@ -27,6 +27,7 @@
     color: var(--text);
     font-family: 'Press Start 2P', monospace;
     overflow: hidden;
+    touch-action: none;
   }
 
   body::after {
@@ -760,6 +761,8 @@ document.getElementById('start-btn').addEventListener('click', newGame);
 window.addEventListener('resize', () => { sizeCanvas(); drawBoard(); });
 
 init();
+
+document.addEventListener('gesturestart', e => e.preventDefault());
 </script>
 </body>
 </html>
